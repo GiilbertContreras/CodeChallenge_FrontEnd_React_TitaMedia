@@ -1,0 +1,9 @@
+/* Plataforma debajo de la imagen */
+.platform {
+    background-color: #efefef;
+    border-radius: 10px 10px 0px 0px;
+    bottom: 0;
+    position: absolute;
+    height: 45%;
+    width: 100%;
+}

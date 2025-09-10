@@ -1,0 +1,25 @@
+/* /molecules/SearchInput.module.css */
+.searchBarContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  cursor: text;
+  background: #fff; /* fondo blanco */
+  border-radius: 6px;
+  flex: 1 1 auto !important;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #888;
+  padding: 0;
+}
+.clearBtn:hover {
+  color: #333;
+}

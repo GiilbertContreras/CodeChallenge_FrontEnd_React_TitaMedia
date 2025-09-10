@@ -1,0 +1,19 @@
+/* Botón base */
+.btn {
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: inline-flex;     /* flex interno en lugar de inline-block */
+    justify-content: center;  /* centra horizontal */
+    align-items: center;      /* centra vertical */
+    font-size: 1rem;
+    padding: .6em 1.2em;
+    transition: background-color .3s ease, transform .2s ease;
+    gap: 1rem;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.btn:active {
+    transform: translateY(0);
+}
