@@ -8,7 +8,7 @@
     align-items: center;      /* centra vertical */
     font-size: 1rem;
     padding: .6em 1.2em;
-    transition: background-color .3s ease, transform .2s ease;
+    transition: all .3s ease, transform .2s ease;
     gap: 1rem;
 }
 .btn:hover {

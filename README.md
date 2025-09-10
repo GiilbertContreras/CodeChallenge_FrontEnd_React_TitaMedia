@@ -51,8 +51,8 @@ Este proyecto construido en **React**, directorio organizado **Atomic Design**, 
 5. Contenedores / Control de Versiones / Despliegue:
     a. Docker.
         - Node.js 20-alpine.
-    b. `serve` - GitHub.
-    c. `serve` - producción.
+    b. `https://github.com/GiilbertContreras/CodeChallenge_FrontEnd_React_TitaMedia.git` - GitHub.
+    c. `https://codechallengetita-f046867daff6.herokuapp.com/` - producción.
     
 
 ----------------------
@@ -70,7 +70,7 @@ Este proyecto construido en **React**, directorio organizado **Atomic Design**, 
 
 1. Clonar el repositorio:
     *bash*
-        `git clone <REPO_URL>`
+        `git clone https://github.com/GiilbertContreras/CodeChallenge_FrontEnd_React_TitaMedia.git`
         `cd pokedex-react-docker`
     *fin bash*
 
@@ -94,68 +94,117 @@ Este proyecto construido en **React**, directorio organizado **Atomic Design**, 
 
 /pokedex-react-docker
 ├── /public
-│   │   favicon.png: Icono de la aplicación mostrado en la pestaña del navegador
-│   └── index.html: Punto de entrada HTML principal que carga la app React
+│   ├── *favicon.png:* Icono de la app en la pestaña del navegador
+│   └── *index.html:* HTML principal que carga la app React
 ├── /src
 │   ├── /assets
-│   │   │   ├── logo.png: Logotipo de la aplicación utilizado en el Header u otras vistas
-│   ├── /components: Organizacion atomic design
+│   │   ├── *default-pokemon.png:* Imagen por defecto de un Pokémon
+│   │   └── *logo.png:* Logotipo de la app
+│   ├── /components
 │   │   ├── /atoms
-│   │   │   ├── Badge.js: Componente atómico para mostrar etiquetas o categorías
-│   │   │   └── StatBar.js: Barra visual para representar estadísticas de un Pokémon
+│   │   │   ├── *Button/:* Componente botón genérico
+│   │   │   ├── *FavoriteIcon/:* Icono de favorito
+│   │   │   ├── *FilterIcon/:* Icono de filtro
+│   │   │   ├── *IconPlus/:* Icono de agregar
+│   │   │   ├── *Input/:* Componente de entrada de texto
+│   │   │   ├── *Logo/:* Componente de logotipo
+│   │   │   ├── *Platform/:* Icono o información de plataforma
+│   │   │   ├── *PokemonId/:* Muestra el ID de un Pokémon
+│   │   │   ├── *PokemonImage/:* Muestra la imagen de un Pokémon
+│   │   │   ├── *PokemonName/:* Muestra el nombre de un Pokémon
+│   │   │   ├── *RadioButton/:* Botón de opción
+│   │   │   ├── *SearchIcon/:* Icono de búsqueda
+│   │   │   └── *Title/:* Componente de título
 │   │   ├── /molecules
-│   │   │   ├── PokemonCard.js: Tarjeta que muestra imagen, número y nombre de un Pokémon
-│   │   │   ├── SearchBar.js: Barra de búsqueda con filtro por nombre o número de Pokémon
-│   │   │   └── SortSelector.js: Selector para ordenar la lista de Pokémon (por nombre o número)
-│   │   └── /organisms
-│   │       ├── AddPokemonModal.css: Estilos del modal para agregar Pokémon favoritos
-│   │       ├── AddPokemonModal.js: Modal para agregar un Pokémon a la lista de favoritos
-│   │       ├── FavoritesList.js: Lista que muestra los Pokémon agregados a favoritos
-│   │       ├── Header.css: Estilos del encabezado principal
-│   │       ├── Header.js: Encabezado con logo y controles de navegación
-│   │       ├── PokemonDetail.js: Vista con información detallada de un Pokémon
-│   │       ├── PokemonList.css: Estilos para la cuadrícula de tarjetas Pokémon
-│   │       └── PokemonList.js: Contenedor que renderiza y gestiona la lista de Pokémon
+│   │   │   ├── *ButtonAddPokemon/:* Botón para agregar Pokémon
+│   │   │   ├── *ButtonFilterFavorites/:* Botón para filtrar favoritos
+│   │   │   ├── *Imagotipo/:* Componente de imagotipo
+│   │   │   ├── *OrderSelector/:* Selector de orden
+│   │   │   ├── *PokemonCard/:* Tarjeta de Pokémon
+│   │   │   ├── *SearchBar/:* Barra de búsqueda
+│   │   ├── /organisms
+│   │   │   ├── *FavoritesList.js:* Lista de Pokémon favoritos
+│   │   │   ├── *Header.js:* Encabezado principal
+│   │   │   ├── *PokemonList.js:* Lista de Pokémon
+│   │   │   └── *PokemonModal.js:* Modal de información de Pokémon
+│   │   ├── /pages
+│   │   │   └── *HomePage.js:* Página principal
+│   │   └── /templates
+│   │       └── *MainTemplate.js:* Plantilla principal
 │   ├── /graphql
-│   │   ├── mutations.js: Definición de mutaciones GraphQL (agregar, actualizar, eliminar Pokémon)
-│   │   └── queries.js: Consultas GraphQL para obtener lista y detalles de Pokémon
+│   │   ├── *mutations.js:* Mutaciones GraphQL
+│   │   └── *queries.js:* Consultas GraphQL
 │   ├── /hooks
-│   │   └── usePokemon.js: Custom hook para manejar lógica de carga, búsqueda y orden de Pokémon
-│   ├── App.js: Componente raíz de la aplicación React, ensambla los organismos y rutas
-│   └── index.js: Punto de entrada React; renderiza <App /> dentro de index.html
-├── docker-compose.yml: Orquesta los contenedores: app, db, servicios externos
-├── Dockerfile: Construcción del contenedor React para producción
-├── package.json: Dependencias, scripts y configuración de NPM
-└── README.md: Guía básica de instalación, uso y despliegue de la aplicación
+│   │   └── *usePokemon.js:* Lógica de Pokémon
+│   ├── /utils
+│   │   └── *validation.js:* Funciones de validación
+│   ├── *App.js:* Componente raíz
+│   ├── *index.css:* Hoja de Estilo Global
+│   └── *index.js:* Entrada de React
+├── *docker-compose.yml:* Orquestador de contenedores
+├── *Dockerfile:* Construcción de la app React
+├── *package.json:* Dependencias y scripts
+└── *README.md:* Guía de uso
 
 ----------------------
 
 ## Funcionalidades
 
-1. **Listado de Pokémon**
+1. Listado de Pokémon
 
-   * Orden alfabético.
-   * Carga paginada o completa según diseño.
+    - Visualización completa de la lista de Pokémon usando PokemonList.js y tarjetas PokemonCard.
 
-2. **Detalle del Pokémon**
+    - Orden configurable por nombre o número con SortSelector.js.
 
-   * Nombre, tipo, imagen, generación, altura, peso.
-   * Acceso desde la lista o búsqueda.
+    - Paginación implementada para carga eficiente de los Pokémon.
 
-3. **Favoritos**
+2. Detalle del Pokémon
 
-   * Agregar y remover Pokémon.
-   * Persistencia local (state o localStorage).
+    - Información completa: nombre, tipo(s), imagen (PokemonImage), generación, altura y peso.
 
-4. **Filtros**
+    - Acceso desde la lista (PokemonCard) o mediante búsqueda (SearchBar).
 
-   * Por tipo de Pokémon.
-   * Interfaz interactiva y responsiva.
+    - Modal dinámico (PokemonModal.js) para ver detalles y navegación entre Pokémon.
 
-5. **Validación**
+3. Gestión de Favoritos
 
-   * Nombres válidos (mínimo 3 caracteres, sin caracteres especiales).
-   * Validación en formularios de favoritos y filtros.
+    - Agregar Pokémon a favoritos con ButtonAddPokemon o iconos de favorito (FavoriteIcon).
+
+    - Quitar Pokémon de favoritos desde la lista de favoritos (FavoritesList.js).
+
+    - Persistencia local en estado o localStorage.
+
+    - Los Pokémon nunca se eliminan de la lista principal.
+
+4. Filtros Interactivos
+
+    - Filtrado por tipo de Pokémon usando botones o selectores (ButtonFilterFavorites, OrderSelector).
+
+    - Interfaz responsiva y dinámica, soportando subacordeones y badges para selección múltiple.
+
+5. Búsqueda y Validación
+
+    - Búsqueda por nombre con SearchInput.js.
+
+    - Validación de entradas: nombres con mínimo 3 caracteres y sin símbolos.
+
+    - Aplicada en formularios de favoritos y filtros mediante validation.js.
+
+6. Plantillas y Organización
+
+    - Uso de MainTemplate.js para estructura principal de la app.
+
+    - Componentes organizados siguiendo Atomic Design: atoms, molecules, organisms y pages.
+
+7. Integración GraphQL
+
+    - Consultas (queries.js) para obtener datos de Pokémon.
+
+8. Experiencia Visual y Responsiva
+
+    - Imágenes de Pokémon (PokemonImageWrapper) con placeholder (default-pokemon.png).
+
+    - Diseño adaptable con componentes reutilizables y estilizados.
 
 
 ----------------------
@@ -166,11 +215,3 @@ Este proyecto construido en **React**, directorio organizado **Atomic Design**, 
 * [React Official Docs](https://reactjs.org/)
 * [Apollo Client](https://www.apollographql.com/docs/react/)
 * [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-
-
-----------------------
-
-## Posibles mejoras
-* Integración con **Redux** para estado global más complejo.
-* Testeo completo de todos los componentes.
-* Implementación de dark mode y mejoras de UX según mockup Figma.

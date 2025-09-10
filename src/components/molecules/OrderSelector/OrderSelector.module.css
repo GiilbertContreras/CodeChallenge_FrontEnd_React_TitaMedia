@@ -1,17 +1,12 @@
-/* /molecules/OrderSelector.module.css */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdownToggle {
-  padding: 8px 12px;
-  background: #d60000; /* rojo */
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
+.dropdownInterruptor{
+  padding: .6em 0.9em;
+  border-radius: 15rem;
+  box-shadow: inset 0 1px 3px #00000075;
 }
 
 .dropdownMenu {
@@ -19,19 +14,18 @@
   top: 110%;
   right: 0;
   width: 200px;
-  background: #d60000; /* cabecera roja */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   overflow: hidden;
   z-index: 1000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .dropdownTitle {
   margin: 0;
   padding: 10px;
-  background: #d60000;
+  background: #dc0a2d;
   color: #fff;
-  font-size: 14px;
   font-weight: 700;
 }
 

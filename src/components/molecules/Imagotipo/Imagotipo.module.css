@@ -1,5 +1,11 @@
-.imagotipoFlex {
+.contenedorImagotipo {
   display: flex;
   align-items: center;
   gap: 0.5rem; /* espacio entre logo y botón */
+}
+
+.titulo {
+  font-weight: bold;
+  margin: 0;
+  color: white;
 }

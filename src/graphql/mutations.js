@@ -1,1 +1,0 @@
-/* Mutations simuladas para favoritos locales */
